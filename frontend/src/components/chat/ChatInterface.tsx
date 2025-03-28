@@ -120,7 +120,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ className }) => {
         setTimeout(() => {
           const handlePredict = async () => {
             const response = await axios.post(
-              "http://localhost:5000/predict",
+              // "http://localhost:5000/predict",
+              "https://symptoverge-production.up.railway.app/predict",
               {
                 text: userMessage.content || "",
               },
