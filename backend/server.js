@@ -7,7 +7,7 @@ configDotenv();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: "https://sympto-verge-frontend.vercel.app" }));
 
 const PORT = process.env.PORT || 6000;
 const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY;
