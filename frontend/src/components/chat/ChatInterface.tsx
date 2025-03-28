@@ -92,7 +92,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ className }) => {
     try {
       if (chatMode === "ai") {
         const response = await axios.post(
-          "http://localhost:5000/chat",
+          // "http://localhost:5000/chat",
+          "https://sympto-verge-node-backend.vercel.app/chat",
           {
             text: userMessage.content || "",
           },
