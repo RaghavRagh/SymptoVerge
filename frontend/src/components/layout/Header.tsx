@@ -22,7 +22,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             <Heart className="h-5 w-5 text-primary" />
           </div>
           <Link to="/" className="font-semibold text-xl tracking-tight ml-1">
-            HealthAssist
+          SymptoVerge
+            {/* HealthAssist */}
           </Link>
           <div className="hidden md:flex items-center ml-4 gap-6">
             <Link
