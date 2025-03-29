@@ -48,8 +48,9 @@ Ensure you have the following installed:
 
 ### 🔹 Backend Setup (FastAPI + ML Model)
 
+For running FastAPI
 ```bash
-cd backend
+cd py_backend
 pip install -r requirements.txt
 uvicorn ml_api:app --reload
 ```
