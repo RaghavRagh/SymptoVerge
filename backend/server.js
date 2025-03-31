@@ -15,7 +15,10 @@ const MISTRAL_API_KEY = process.env.MISTRAL_API_KEY;
 app.post("/predict", async (req, res) => {
   console.log(req.body.text);
   try {
-    const response = await axios.post("http://127.0.0.1:8000/predict", {
+    // const response = await axios.post("http://127.0.0.1:8000/predict", {
+    //   text: req.body.text,
+    // });
+    const response = await axios.post("https://symptoverge-fastapi.onrender.com/predict", {
       text: req.body.text,
     });
 
