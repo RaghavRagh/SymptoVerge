@@ -121,7 +121,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ className }) => {
           const handlePredict = async () => {
             const response = await axios.post(
               // "http://localhost:5000/predict",
-              "https://sympto-verge-nbend-7uuz0jkbd-raghavs-projects-3cafbf94.vercel.app/predict",
+              "https://sympto-verge-nbend.vercel.app/predict",
               {
                 text: userMessage.content || "",
               },
