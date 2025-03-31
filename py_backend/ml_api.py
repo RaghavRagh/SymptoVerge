@@ -11,7 +11,13 @@ df = pd.read_csv("symbipredict_2022.csv")
 symptom_columns = df.columns[:-1]
 
 # NLP model
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    import subprocess
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
 
 symptom_list = list(df.columns[:-1])
 
