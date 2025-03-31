@@ -75,3 +75,7 @@ def predict_disease(user_input: UserInput):
     response = {"predicted_disease": predicted_disease, "extracted_symptoms": symptoms}
 
     return {"response": response}
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Disease Prediction API!"}
